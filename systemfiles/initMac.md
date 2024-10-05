@@ -5,6 +5,7 @@
 ```
 # For Locale
 export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 # For ls
 export CLICOLOR=1
@@ -29,3 +30,6 @@ git config --global user.name "Fei"
 git config --global user.email "feidylan23@gmail.com"
 echo ".DS_Store" >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
+
+git config --global i18n.commitEncoding utf-8
+git config --global i18n.logOutputEncoding utf-8
