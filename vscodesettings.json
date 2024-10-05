@@ -1,0 +1,46 @@
+{
+    "workbench.colorTheme": "Default Light Modern",
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+    "security.workspace.trust.untrustedFiles": "open",
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "c": "cd $dir && clang $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        //"cpp": "cd $dir && clang++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp":"cd $dir && clang++ -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        //"cpp":"cd $dir && clang++ -std=c++17 -Wno-deprecated-declarations -I/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3 -I/opt/homebrew/Cellar/boost/1.85.0/include -L/opt/homebrew/Cellar/boost/1.85.0/lib $fileName -o $fileNameWithoutExt -lboost_system -lboost_filesystem && $dir$fileNameWithoutExt",
+        "java": "cd $dir && javac $fileName && java -cp $dir $fileNameWithoutExt"
+        /*
+        * clang++ -std=c++17: Use C++17 standard
+        * -Wno-deprecated-declarations: Suppress deprecated declarations warnings, useful for Boost
+        * -I/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3: Include path for the Eigen library
+        * -I/opt/homebrew/Cellar/boost/1.85.0/include: Include path for the Boost library
+        * $fileName -o $fileNameWithoutExt: Compile the source file into an executable
+        * -lboost_system -lboost_filesystem: Link with Boost system and filesystem libraries
+        * && $dir$fileNameWithoutExt: Run the compiled executable
+        */
+    },
+    "code-runner.executorMapByFileExtension": {
+        ".vhd": "cd $dir && ghdl -a $fileName && ghdl -e $fileNameWithoutExt && ghdl -r $fileNameWithoutExt",
+        ".vhdl": "cd $dir && ghdl -a $fileName && ghdl -e $fileNameWithoutExt && ghdl -r $fileNameWithoutExt",
+        //".v": "cd $dir && iverilog -g2012 -o $fileNameWithoutExt.vvp $fileName && vvp $fileNameWithoutExt.vvp",
+        ".v": "cd $dir && iverilog -g2012 -D`echo TB_$fileNameWithoutExt | tr '[a-z]' '[A-Z]'` -o $fileNameWithoutExt.vvp $fileName && vvp $fileNameWithoutExt.vvp",
+        ".vcd":"cd $dir && gtkwave $fileName"
+    },
+    
+    "cmake.configureOnOpen": true,
+    "editor.codeActionsOnSave": {},
+    
+    "code-runner.languageIdToFileExtensionMap": {
+
+        "bat": ".bat",
+        "powershell": ".ps1",
+        "typescript": ".ts"
+    },
+    "C_Cpp.inactiveRegionOpacity": 0.55,
+    "C_Cpp.default.customConfigurationVariables": {},
+    "workbench.editor.empty.hint": "hidden",
+    "editor.wordWrap": "on",
+    "git.openRepositoryInParentFolders": "always",
+    "editor.unicodeHighlight.nonBasicASCII": false
+    
+}

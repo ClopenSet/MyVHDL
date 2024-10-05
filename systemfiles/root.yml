@@ -1,0 +1,62 @@
+"/":
+  description: "根目录"
+  subdirectories:
+    - Applications[完结]:
+        description: "存放应用程序的目录。通常，用户安装的软件都会放在这个目录下"
+        subdirectories:
+          - "Visual Studio Code.app": "图形编辑器"
+    - opt[完结]:
+        description: "可选的应用软件包的安装位置"
+        subdirectories:
+          - Homebrew: "流行的包管理器，用于安装macOS没有预装的软件"
+    - Users:
+        description: "存放所有用户的个人文件夹，每个用户的文档、下载、音乐、图片等都在各自的用户文件夹下"
+        subdirectories:
+          - Shared: "用于存放所有用户都可以访问的共享文件"
+          - sse: "我的个人用户目录"
+          - other_user: "其他用户的个人目录，根据系统设置的不同用户自动创建"
+    - Volumes: "用于挂载各种驱动器，包括硬盘、USB设备等"
+    - dev: "包含设备和特殊文件，这些文件通常代表系统中的物理设备"
+    - bin: "不可或缺的常用的程序"
+    - sbin: "不可或缺的系统管理员使用的系统管理程序"
+    - etc:
+        link: "private/etc"
+    - tmp:
+        link: "private/tmp"
+    - var:
+        link: "private/var"
+    - private:
+        description: "存放一些私有的系统文件，普通用户通常看不到或访问这些目录"
+        subdirectories:
+          - etc: "存放系统配置文件的目录"
+          - tmp: "用于存放临时文件的目录"
+          - var: "存放经常变化的文件，如日志文件的目录"
+    - cores: "包含系统或应用程序崩溃时生成的核心转储文件"
+    - home:
+        description: "用户的家目录通常指向 '/System/Volumes/Data/home'，这是用于数据隔离的符号链接"
+        link: "/System/Volumes/Data/home"
+    - Library: "系统级别或用户级别的配置文件和库文件存放地。这个目录包括了很多设置和支持文件，例如字体、偏好设置等"
+    - System: "存放系统文件和系统应用程序的目录，普通用户通常没有权限修改这里的内容"
+    - usr:
+        description: "存放系统级别的用户应用程序和数据"
+        subdirectories:
+          - bin[完结]:
+              description: "包含用户可执行的二进制程序，这些程序通常由系统管理员和高级用户使用"
+          - sbin[完结]:
+              description: "存放系统管理员使用的静态二进制文件，通常是系统管理命令"
+          - lib:
+              description: "包含标准库文件和模块，这些文件支持位于 /usr/bin 和 /usr/sbin 下的程序"
+          - libexec:
+              description: "包含一些不直接由用户调用的程序，通常由其他程序调用"
+          - local:
+              description: "用于存放本地安装的软件，保持与由包管理系统管理的软件的分离"
+          - share:
+              description: "存放跨架构共享的数据，如man手册页、文档、默认配置文件等"
+          - standalone:
+              description: "包含独立于操作系统直接使用的程序和数据，通常用于启动和配置"
+          - X11:
+              description: "用于X Window系统，是一个链接到 /private/var/select/X11，处理图形界面相关的操作"
+          - X11R6:
+              description: "X Window System 版本6的链接，也链接到 /private/var/select/X11"
+Network[完结]:
+  description: "其他计算机"
