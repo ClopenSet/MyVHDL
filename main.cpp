@@ -36,8 +36,18 @@ bool canGenerateAll(const vector<int>& subset, int m, unordered_map<int, string>
 }
 
 int main() {
-    int m = 12;
-    vector<int> subset = {-12, 1, 2, 4, 8};
+    int m = 10;
+    vector<int> subset = {-10,-8,-6,-4,-2,0,2,4,6,8,10,9,7,5,3};
+    unordered_map<int, string> methods;
+
+    bool result = canGenerateAll(subset, m, methods);
+    cout << "Can generate all numbers from -" << m << " to " << m << ": " << (result ? "Yes" : "No") << endl;
+
+    //if (result) {
+        for (int i = -m; i <= m; ++i) {
+            cout << i << " = " << methods[i] << endl;
+        }
+    //}
 
     return 0;
 }

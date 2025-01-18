@@ -1,16 +1,15 @@
-### **/bin 目录命令分类**
+# /bin 目录命令分类
 
-#### 一、Shell 和命令解释器
+## 一、Shell 和命令解释器
 
-- **sh**：Bourne Shell，标准命令解释器。实际上重定向到bash。
-- **bash**：Bash Shell，GNU 项目的 Bourne Again Shell。
-- **csh**：C Shell，具有 C 语言风格语法的 Shell。
+- ：Bourne Shell，
+- **sh**、**bash**：Bash Shell，GNU 项目的 Bourne Again Shell。sh实际上重定向到bash。
+- **csh**、**tcsh**：C Shell，具有 C 语言风格语法的 Shell；tcsh是增强型 C Shell，具有命令行编辑和历史记录功能。实际上两者采取了相同版本软件。
 - **ksh**：Korn Shell，高级命令解释器。
-- **tcsh**：增强型 C Shell，具有命令行编辑和历史记录功能。
 - **zsh**：Z Shell，功能丰富的 Shell。
 - **dash**：DASH Shell，轻量级 POSIX 兼容的 Shell。
 
-#### 二、文件和目录操作
+#### 二、文件操作
 
 - **cat**：连接并显示文件内容。
 - **chmod**：更改文件权限。
@@ -25,11 +24,9 @@
 - **rm**：删除文件或目录。
 - **rmdir**：删除空目录。
 
-#### 三、文本处理和输出
+#### 三、文本处理
 
-- **echo**：输出一段文本。
 - **ed**：行编辑器。
-- **expr**：计算表达式并输出结果。
 
 #### 四、系统信息和管理
 
@@ -42,12 +39,15 @@
 - **sync**：将内存缓冲区的数据写入磁盘。
 - **wait4path**：等待指定的文件路径存在（通常用于启动脚本）。
 
-#### 五、实用工具
+#### 五、Shell 工具
 
-- **[**：条件测试命令的别名（同 test）。
+- **expr**：计算表达式并输出结果。
+- **echo**：输出一段文本。
+- **[**、**test**：对文件类型和比较值进行条件测试。用于脚本。
+
 - **launchctl**：与 launchd 守护进程交互的工具。
-- **link**：创建硬链接。
+- **link**、**unlink**：创建硬链接、删除文件（通常用于删除硬链接）。
+
 - **realpath**：解析并显示文件的绝对路径。
 - **sleep**：暂停指定的时间。
-- **test**：对文件类型和比较值进行条件测试。
-- **unlink**：删除文件（通常用于删除硬链接）。
+

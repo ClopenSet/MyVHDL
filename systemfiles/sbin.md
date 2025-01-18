@@ -1,4 +1,4 @@
-### **/sbin 目录命令分类**
+### /sbin 目录命令分类
 
 #### 一、文件系统与磁盘管理
 
@@ -63,12 +63,20 @@
 - **kextload**：加载内核扩展模块。
 - **kextunload**：卸载内核扩展模块。
 - **launchd**：系统服务管理守护进程。
-- **md5**：计算和验证 MD5 校验和。
+
 - **mknod**：创建特殊文件（设备文件）。
 - **nologin**：拒绝非 root 用户登录。
 - **pfctl**：控制和配置 Packet Filter（防火墙）。
 - **quotacheck**：检查文件系统的磁盘配额。
 - **reboot**：重新启动系统。
 - **shutdown**：计划系统关闭或重启。
+- **fsck_fskit**：
+- **newfs_fskit**：
 
----
+#### 四、校验
+- **md5**、**md5sum**：计算和验证 MD5 校验和。
+- **sha1**、**sha1sum**
+- **sha224**、**sha224sum**
+- **sha256**、**sha256sum**
+- **sha384**、**sha384sum**
+- **sha512**、**sha512sum**
